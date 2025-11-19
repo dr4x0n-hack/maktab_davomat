@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>8-sinf Davomat Tizimi</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 800px; margin: auto; }
+    input, select, button { margin: 6px; padding: 8px; font-size: 16px; }
+    .admin { border: 1px solid #aaa; padding: 15px; width: 300px; border-radius: 5px; }
+    #panel h3, #panel h4 { margin-top: 20px; }
+    pre { background: #f3f3f3; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+<h2>📘 8-sinf Davomat Tizimi</h2>
+
+<div class="admin">
+  <h3>Admin Panelga kirish</h3>
+  <input id="user" placeholder="Username">
+  <input id="pass" placeholder="Parol" type="password">
+  <button onclick="login()">Kirish</button>
+</div>
+
+<div id="panel" style="display:none;">
+  <h3>Admin Panel</h3>
+
+  <h4>👨‍🎓 Yangi o‘quvchi qo‘shish</h4>
+  <input id="newName" placeholder="Ism Familiya">
+  <button onclick="addStudent()">Qo‘shish</button>
+
+  <h4>📋 Davomat olish</h4>
+  <select id="studentList"></select>
+  <select id="status">
+    <option value="bor">Bor</option>
+    <option value="yo‘q">Yo‘q</option>
+    <option value="sababli">Sababli</option>
+  </select>
+  <button onclick="saveAttendance()">Saqlash</button>
+
+  <h4>📘 O‘quvchilar ro‘yxati</h4>
+  <pre id="allStudents"></pre>
+
+  <h4>📅 Davomat tarixi</h4>
+  <pre id="allAttendance"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
